@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+{% block nav_test %}active{% endblock nav_test %}
+{% block content %}
+<style>
+  body{
+      background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoIBwgHCAoQBwcHBwoHBwcHDRAICQcKFREWFhURExMYHSggGCYlJxUTITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NFSsZFR0rLSstLSstMC0rKy0rLS0rKysrKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAb/xAAaEAEBAQEBAQEAAAAAAAAAAAAAEQESAhMD/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD2/I5b8jl3cWHI5b8jkGHI5b8jkGHI5b8jkGHI5b8jgVhyfDfhWeCjn4Ph05+Z5+aUjm+avm6c/M+CkcvzP5urgcFI5PmPm6+BwUjj38y383ZwnfzKRyb4Lh17+ad/NaRy8Fy6d8FwDn5HLfgciMORy35HIMORy35HIMORy35HIMORy35HINuBw1giNMuBw1ggMuBw1ggMuBw1ggMuFZ4a55VnlBlnhWfm1zyrMBlnhXDWCIrPkctYIDPkctIIDPkctIIDLkuGxQGPCd8OiFuA5t8J3w6t8o3ytRzb4Lh0b5TuAx4HDWCKMuBw1ggMuBw1ggMuBw1ggKgi4IgiCLggIgi4ICYeYeYrMAsxWeVZisxFLMOKggJgigCYIoAmCKAJgigCYIoAmCKAIhbjSFuAx3E7jbcTuAx3CjTcKKiIIuCAiCLggIgi4ICgqCIJCoICRFQZgpZi8wZi8wCzFQ8w4gQOCCkIcOAmHFcnyCII05HIM4I05HIMoI05LfIICoUAiioICNxO41idwRjuJ3G24jcUQFQQEhUEESFQQFQRUEFTBFQQEw8w4eYAzFZgzFZiKIFQQEnDisxBOYrMVmHATDhmCQoAkRQBMKLKAz3C3Gm4W4DMlwooktxcLcBnuJ3Gm4ncEZ7gitwRRMEVBATBFQQFQRUERUwRUEBMPMOHmAMxWYMxWYgUOHDzALMVmDMVBSCoICQqCAkKggJCoICQqCAkbioUBG4ncabidwEwoqCCM9xO403E7iiNworcEBMEVBATBFQQFQRUEQTBFQQEw4cOAMxWYWYrAEPMB4AzFDDFIGECBgCBgCBgCBgCBgE7hbi06ojcJe4QiNTuL0twEQoqCAmCKggJgioICoIuCAiCLggIhxUEAsPBDwBisB4inmCHggEDggEDggEDggEDggEDggEDggFC3FQtwEaS9TuKJSuFBEQRcEBEEXBARBFwQFQRUERUwRUEBMEVBATDhwQAeCHgGYwQADggEDggEDggEDggEDggEDggJLVECdSsoCIIqCAmCKggJgioICYIqCAX0wfTHJ2O1iOv6YPpjk7HZB1/TB9McvY7IV1fTB9McvY7IOv6YM/THJ2fZFdme8PrHJnteeyDp6wdYwz0fSDa4LjLodA1uC4y6HQNbguMuh0Daiseh0DW4OmXSd9g231hb7xhvtO+1g6O8LvHN2OyDp7wd45ux2QdPeDrHN2OyDp6wdY5ux2QdPWDrHP2OyDj7Hbn+g+jbFdHY7c/0H0SFdPY7c30HZB09jtzfQfQg6ex25uz+hFdWe1Z+jj+h5+hCu/P0Vntw5+jTP1SFdeez7cuforsi10dH05/oOyFdHRdMOx2Qb9l2w+id/QhXRv6I39HPv6I39CJXRv6J7c/0LtYV09jtzdn2Do7Hbn7HZB0djtz9jsg6Ox25+x2QdHZ9ubsdg4gA0yYAAwAAMACMAAZAF4vDCKvFYYQPDAFBAAWo0AEanQFQgAoAAAMAAAEAAAAAB//2Q==');
+      width: 100%;
+      height: 90vh;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  .container{
+      margin-top: 10px;
+      padding-bottom: 20px;
+  }
+</style>
+<style>
+  
+    .tableFixHead          { overflow: auto; height: 100vh; width: auto; }
+.tableFixHead thead th { position: sticky; top: 0; z-index: 1; background-color: aliceblue;}
+.tableFixHead tbody th { position: sticky; left: 0; }
+</style>
+<div class="container">
+
+    <form action="" method="POST" class="tableFixHead table-responsive ">
+        {% csrf_token %}
+        <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col">Questions</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                <th scope="row">I am the life of the party</th>
+                <td><input class="form-check-input" type="radio" name="q1" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q1" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q1" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q1" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q1" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I feel little concern for others</th>
+                <td><input class="form-check-input" type="radio" name="q2" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q2" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q2" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q2" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q2" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am always prepared</th>
+                <td><input class="form-check-input" type="radio" name="q3" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q3" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q3" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q3" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q3" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I get stressed out easily</th>
+                <td><input class="form-check-input" type="radio" name="q4" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q4" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q4" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q4" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q4" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have a rich vocabulary</th>
+                <td><input class="form-check-input" type="radio" name="q5" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q5" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q5" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q5" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q5" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I don’t talk a lot</th>
+                <td><input class="form-check-input" type="radio" name="q6" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q6" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q6" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q6" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q6" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am interested in people</th>
+                <td><input class="form-check-input" type="radio" name="q7" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q7" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q7" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q7" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q7" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I leave my belongings around</th>
+                <td><input class="form-check-input" type="radio" name="q8" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q8" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q8" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q8" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q8" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am relaxed most of the time</th>
+                <td><input class="form-check-input" type="radio" name="q9" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q9" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q9" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q9" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q9" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have difficulty understanding abstract ideas</th>
+                <td><input class="form-check-input" type="radio" name="q10" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q10" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q10" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q10" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q10" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I feel comfortable around people</th>
+                <td><input class="form-check-input" type="radio" name="q11" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q11" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q11" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q11" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q11" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I insult people</th>
+                <td><input class="form-check-input" type="radio" name="q12" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q12" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q12" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q12" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q12" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I pay attention to details</th>
+                <td><input class="form-check-input" type="radio" name="q13" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q13" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q13" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q13" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q13" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I worry about things</th>
+                <td><input class="form-check-input" type="radio" name="q14" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q14" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q14" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q14" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q14" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have a vivid imagination</th>
+                <td><input class="form-check-input" type="radio" name="q15" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q15" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q15" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q15" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q15" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I keep in the background</th>
+                <td><input class="form-check-input" type="radio" name="q16" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q16" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q16" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q16" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q16" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I sympathize with others’ feelings</th>
+                <td><input class="form-check-input" type="radio" name="q17" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q17" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q17" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q17" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q17" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I make a mess of things</th>
+                <td><input class="form-check-input" type="radio" name="q18" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q18" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q18" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q18" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q18" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I seldom feel blue</th>
+                <td><input class="form-check-input" type="radio" name="q19" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q19" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q19" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q19" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q19" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am not interested in abstract ideas</th>
+                <td><input class="form-check-input" type="radio" name="q20" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q20" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q20" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q20" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q20" value="5"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">I start conversations</th>
+                <td><input class="form-check-input" type="radio" name="q21" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q21" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q21" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q21" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q21" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am not interested in other people’s problemss</th>
+                <td><input class="form-check-input" type="radio" name="q22" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q22" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q22" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q22" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q22" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I get chores done right away</th>
+                <td><input class="form-check-input" type="radio" name="q23" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q23" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q23" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q23" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q23" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am easily disturbed</th>
+                <td><input class="form-check-input" type="radio" name="q24" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q24" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q24" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q24" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q24" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have excellent ideas</th>
+                <td><input class="form-check-input" type="radio" name="q25" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q25" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q25" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q25" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q25" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have little to say</th>
+                <td><input class="form-check-input" type="radio" name="q26" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q26" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q26" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q26" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q26" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have a soft heart</th>
+                <td><input class="form-check-input" type="radio" name="q27" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q27" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q27" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q27" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q27" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I often forget to put things back in their proper place</th>
+                <td><input class="form-check-input" type="radio" name="q28" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q28" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q28" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q28" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q28" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I get upset easily</th>
+                <td><input class="form-check-input" type="radio" name="q29" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q29" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q29" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q29" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q29" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I do not have a good imagination</th>
+                <td><input class="form-check-input" type="radio" name="q30" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q30" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q30" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q30" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q30" value="5"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">I talk to a lot of different people at parties.</th>
+                <td><input class="form-check-input" type="radio" name="q31" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q31" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q31" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q31" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q31" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am not really interested in others</th>
+                <td><input class="form-check-input" type="radio" name="q32" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q32" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q32" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q32" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q32" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I like order</th>
+                <td><input class="form-check-input" type="radio" name="q33" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q33" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q33" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q33" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q33" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I change my mood a lot</th>
+                <td><input class="form-check-input" type="radio" name="q34" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q34" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q34" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q34" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q34" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am quick to understand things.</th>
+                <td><input class="form-check-input" type="radio" name="q35" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q35" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q35" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q35" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q35" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I don’t like to draw attention to myself</th>
+                <td><input class="form-check-input" type="radio" name="q36" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q36" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q36" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q36" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q36" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I take time out for others</th>
+                <td><input class="form-check-input" type="radio" name="q37" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q37" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q37" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q37" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q37" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I avoid my duties</th>
+                <td><input class="form-check-input" type="radio" name="q38" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q38" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q38" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q38" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q38" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I have frequent mood swings</th>
+                <td><input class="form-check-input" type="radio" name="q39" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q39" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q39" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q39" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q39" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I use difficult words</th>
+                <td><input class="form-check-input" type="radio" name="q40" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q40" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q40" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q40" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q40" value="5"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">I don’t mind being the center of attention</th>
+                <td><input class="form-check-input" type="radio" name="q41" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q41" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q41" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q41" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q41" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I feel others’ emotions</th>
+                <td><input class="form-check-input" type="radio" name="q42" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q42" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q42" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q42" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q42" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I follow a schedule</th>
+                <td><input class="form-check-input" type="radio" name="q43" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q43" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q43" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q43" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q43" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I get irritated easily</th>
+                <td><input class="form-check-input" type="radio" name="q44" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q44" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q44" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q44" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q44" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I spend time reflecting on things</th>
+                <td><input class="form-check-input" type="radio" name="q45" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q45" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q45" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q45" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q45" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am quiet around strangers</th>
+                <td><input class="form-check-input" type="radio" name="q46" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q46" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q46" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q46" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q46" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I make people feel at ease</th>
+                <td><input class="form-check-input" type="radio" name="q47" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q47" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q47" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q47" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q47" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am thorough / demanding in my work</th>
+                <td><input class="form-check-input" type="radio" name="q48" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q48" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q48" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q48" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q48" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I often feel depressed</th>
+                <td><input class="form-check-input" type="radio" name="q49" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q49" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q49" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q49" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q49" value="5"></td>
+              </tr>
+              <tr>
+                <th scope="row">I am full of idea</th>
+                <td><input class="form-check-input" type="radio" name="q50" value="1" required/></td>
+                <td><input class="form-check-input" type="radio" name="q50" value="2"></td>
+                <td><input class="form-check-input" type="radio" name="q50" value="3"></td>
+                <td><input class="form-check-input" type="radio" name="q50" value="4"></td>
+                <td><input class="form-check-input" type="radio" name="q50" value="5"></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+</div>
+{% endblock content %}

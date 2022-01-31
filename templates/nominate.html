@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block nav_nominate %}active{% endblock nav_nominate %}
+{% block content %}
+<style>
+    body{
+        background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoIBwgHCAoQBwcHBwoHBwcHDRAICQcKFREWFhURExMYHSggGCYlJxUTITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NFSsZFR0rLSstLSstMC0rKy0rLS0rKysrKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAb/xAAaEAEBAQEBAQEAAAAAAAAAAAAAEQESAhMD/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD2/I5b8jl3cWHI5b8jkGHI5b8jkGHI5b8jkGHI5b8jgVhyfDfhWeCjn4Ph05+Z5+aUjm+avm6c/M+CkcvzP5urgcFI5PmPm6+BwUjj38y383ZwnfzKRyb4Lh17+ad/NaRy8Fy6d8FwDn5HLfgciMORy35HIMORy35HIMORy35HIMORy35HINuBw1giNMuBw1ggMuBw1ggMuBw1ggMuFZ4a55VnlBlnhWfm1zyrMBlnhXDWCIrPkctYIDPkctIIDPkctIIDLkuGxQGPCd8OiFuA5t8J3w6t8o3ytRzb4Lh0b5TuAx4HDWCKMuBw1ggMuBw1ggMuBw1ggKgi4IgiCLggIgi4ICYeYeYrMAsxWeVZisxFLMOKggJgigCYIoAmCKAJgigCYIoAmCKAIhbjSFuAx3E7jbcTuAx3CjTcKKiIIuCAiCLggIgi4ICgqCIJCoICRFQZgpZi8wZi8wCzFQ8w4gQOCCkIcOAmHFcnyCII05HIM4I05HIMoI05LfIICoUAiioICNxO41idwRjuJ3G24jcUQFQQEhUEESFQQFQRUEFTBFQQEw8w4eYAzFZgzFZiKIFQQEnDisxBOYrMVmHATDhmCQoAkRQBMKLKAz3C3Gm4W4DMlwooktxcLcBnuJ3Gm4ncEZ7gitwRRMEVBATBFQQFQRUERUwRUEBMPMOHmAMxWYMxWYgUOHDzALMVmDMVBSCoICQqCAkKggJCoICQqCAkbioUBG4ncabidwEwoqCCM9xO403E7iiNworcEBMEVBATBFQQFQRUEQTBFQQEw4cOAMxWYWYrAEPMB4AzFDDFIGECBgCBgCBgCBgCBgE7hbi06ojcJe4QiNTuL0twEQoqCAmCKggJgioICoIuCAiCLggIhxUEAsPBDwBisB4inmCHggEDggEDggEDggEDggEDggEDggFC3FQtwEaS9TuKJSuFBEQRcEBEEXBARBFwQFQRUERUwRUEBMEVBATDhwQAeCHgGYwQADggEDggEDggEDggEDggEDggJLVECdSsoCIIqCAmCKggJgioICYIqCAX0wfTHJ2O1iOv6YPpjk7HZB1/TB9McvY7IV1fTB9McvY7IOv6YM/THJ2fZFdme8PrHJnteeyDp6wdYwz0fSDa4LjLodA1uC4y6HQNbguMuh0Daiseh0DW4OmXSd9g231hb7xhvtO+1g6O8LvHN2OyDp7wd45ux2QdPeDrHN2OyDp6wdY5ux2QdPWDrHP2OyDj7Hbn+g+jbFdHY7c/0H0SFdPY7c30HZB09jtzfQfQg6ex25uz+hFdWe1Z+jj+h5+hCu/P0Vntw5+jTP1SFdeez7cuforsi10dH05/oOyFdHRdMOx2Qb9l2w+id/QhXRv6I39HPv6I39CJXRv6J7c/0LtYV09jtzdn2Do7Hbn7HZB0djtz9jsg6Ox25+x2QdHZ9ubsdg4gA0yYAAwAAMACMAAZAF4vDCKvFYYQPDAFBAAWo0AEanQFQgAoAAAMAAAEAAAAAB//2Q==');
+        width: 100%;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 2;
+      }
+    .container{
+      padding: 30px;
+    }
+</style>
+
+<div class="container"> 
+  <form action="nominate" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-check-label" for="sender_name">You Name</label>
+      <input type="text" class="form-control" id="sender_name" aria-describedby="emailHelp" name="sender_name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-check-label" for="name">Name of the nominee</label>
+      <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-check-label" for="msg">Message(optional)</label>
+      <input type="text" class="form-control" id="msg" aria-describedby="emailHelp" name="msg" >
+    </div>
+    <div class="mb-3">
+      <label class="form-check-label" for="mail">Email</label>
+      <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="mail" required>
+    </div>
+    <button type="submit"  class="btn btn-light ">Send</button>
+</form>
+</div>
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block nav_logic %}active{% endblock nav_logic %}
+{% block content %}
+<style>
+    body{
+        background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoIBwgHCAoQBwcHBwoHBwcHDRAICQcKFREWFhURExMYHSggGCYlJxUTITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NFSsZFR0rLSstLSstMC0rKy0rLS0rKysrKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAb/xAAaEAEBAQEBAQEAAAAAAAAAAAAAEQESAhMD/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD2/I5b8jl3cWHI5b8jkGHI5b8jkGHI5b8jkGHI5b8jgVhyfDfhWeCjn4Ph05+Z5+aUjm+avm6c/M+CkcvzP5urgcFI5PmPm6+BwUjj38y383ZwnfzKRyb4Lh17+ad/NaRy8Fy6d8FwDn5HLfgciMORy35HIMORy35HIMORy35HIMORy35HINuBw1giNMuBw1ggMuBw1ggMuBw1ggMuFZ4a55VnlBlnhWfm1zyrMBlnhXDWCIrPkctYIDPkctIIDPkctIIDLkuGxQGPCd8OiFuA5t8J3w6t8o3ytRzb4Lh0b5TuAx4HDWCKMuBw1ggMuBw1ggMuBw1ggKgi4IgiCLggIgi4ICYeYeYrMAsxWeVZisxFLMOKggJgigCYIoAmCKAJgigCYIoAmCKAIhbjSFuAx3E7jbcTuAx3CjTcKKiIIuCAiCLggIgi4ICgqCIJCoICRFQZgpZi8wZi8wCzFQ8w4gQOCCkIcOAmHFcnyCII05HIM4I05HIMoI05LfIICoUAiioICNxO41idwRjuJ3G24jcUQFQQEhUEESFQQFQRUEFTBFQQEw8w4eYAzFZgzFZiKIFQQEnDisxBOYrMVmHATDhmCQoAkRQBMKLKAz3C3Gm4W4DMlwooktxcLcBnuJ3Gm4ncEZ7gitwRRMEVBATBFQQFQRUERUwRUEBMPMOHmAMxWYMxWYgUOHDzALMVmDMVBSCoICQqCAkKggJCoICQqCAkbioUBG4ncabidwEwoqCCM9xO403E7iiNworcEBMEVBATBFQQFQRUEQTBFQQEw4cOAMxWYWYrAEPMB4AzFDDFIGECBgCBgCBgCBgCBgE7hbi06ojcJe4QiNTuL0twEQoqCAmCKggJgioICoIuCAiCLggIhxUEAsPBDwBisB4inmCHggEDggEDggEDggEDggEDggEDggFC3FQtwEaS9TuKJSuFBEQRcEBEEXBARBFwQFQRUERUwRUEBMEVBATDhwQAeCHgGYwQADggEDggEDggEDggEDggEDggJLVECdSsoCIIqCAmCKggJgioICYIqCAX0wfTHJ2O1iOv6YPpjk7HZB1/TB9McvY7IV1fTB9McvY7IOv6YM/THJ2fZFdme8PrHJnteeyDp6wdYwz0fSDa4LjLodA1uC4y6HQNbguMuh0Daiseh0DW4OmXSd9g231hb7xhvtO+1g6O8LvHN2OyDp7wd45ux2QdPeDrHN2OyDp6wdY5ux2QdPWDrHP2OyDj7Hbn+g+jbFdHY7c/0H0SFdPY7c30HZB09jtzfQfQg6ex25uz+hFdWe1Z+jj+h5+hCu/P0Vntw5+jTP1SFdeez7cuforsi10dH05/oOyFdHRdMOx2Qb9l2w+id/QhXRv6I39HPv6I39CJXRv6J7c/0LtYV09jtzdn2Do7Hbn7HZB0djtz9jsg6Ox25+x2QdHZ9ubsdg4gA0yYAAwAAMACMAAZAF4vDCKvFYYQPDAFBAAWo0AEanQFQgAoAAAMAAAEAAAAAB//2Q==');
+        width: 100%;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    .container{
+        margin-top: 10px;
+        padding-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+   <h1>SCORING THE SURVEY</h1> 
+ <h3>Extraversion</h3>
+ <p>
+    Add the numbers you circled for items #1, 11, 21, 31, and 41. <br>
+    #1_____ #11_____ #21_____ #31_____ #41_____ = Subtotal A_____ <br>
+    For items, #6, 16, 26, 36, 46, subtract the number that you circled from 6. For example, if you<br>
+    circled 4, your score would be 2 (6 – 4 = 2). Using your newly obtained scores, add these five<br>
+    items.<br>
+    6 – item 06 = _________<br>
+    6 – item 16 = _________<br>
+    6 – item 26 = _________<br>
+    6 – item 36 = _________<br>
+    6 – item 46 = _________<br>
+    Subtotal B = __________<br>
+    Subtotal A_____ + Subtotal B_____ = Total Extraversion________<br>
+ </p>
+
+ <h3>Agreeableness</h3>
+ <p>
+    Add the numbers you circled for items #7, 17, 27, 37, 42, and 47.<br>
+    #7____ #17____ #27____ #37____ #42____ #47____ = Subtotal A___<br>
+    For items, #2, 12, 22, 32, subtract the number that you circled from 6. For example, if you
+    circled 4, your score would be 2 (6 – 4 = 2). Using your newly obtained scores, add these four
+    items.<br>
+    6 – item 02 = _________<br>
+    6 – item 12 = _________<br>
+    6 – item 22 = _________<br>
+    6 – item 32 = _________<br>
+    Subtotal B = __________<br>
+    Subtotal A_____ + Subtotal B_____ = Total Agreeableness________<br>
+ </p>
+
+ <h3>Conscientiousness</h3>
+ <p>
+    Add the numbers you circled for items #3, 13, 23, 33, 43, and 48.<br>
+    #3____ #13____ #23____ #33____ #43____ #48____ = Subtotal A___<br>
+    For items, #8, 18, 28, and 38, subtract the number that you circled from 6. For example, if you
+    circled 4, your score would be 2 (6 – 4 = 2). Using your newly obtained scores, add these four
+    items.<br>
+    6 – item 08 = _________<br>
+    6 – item 18 = _________<br>
+    6 – item 28 = _________<br>
+    6 – item 38 = _________<br>
+    Subtotal B = __________<br>
+    Subtotal A_____ + Subtotal B_____ = Total Conscientiousness_________<br>
+ </p>
+
+ <h3>Emotional Stability </h3>
+ <p>
+     Add the numbers you circled for items #9 and 19.<br>
+     #9____ #19____ = Subtotal A___<br>
+     For items, #4, 14, 24, 29, 34, 44 and 49, subtract the number that you circled from 6. For
+     example, if you circled 4, your score would be 2 (6 – 4 = 2). Using your newly obtained scores,
+     add these four items.<br>
+     6 – item 04 = _________<br>
+     6 – item 14 = _________<br>
+     6 – item 24 = _________<br>
+     6 – item 29 = _________<br>
+     6 – item 34 = _________<br>
+     6 – item 39 = _________<br>
+     6 – item 44 = _________<br>
+     6 – item 49 = _________<br>
+     Subtotal B = __________<br>
+     Subtotal A_____ + Subtotal B_____ = Total Emotional Stability____________<br>
+ </p>
+
+ <h3>Openness to Experience</h3>
+ <p>
+    Add the numbers you circled for items #5, 15, 25, 35, 40, 45, and 50.<br>
+    #5____ #15____ #25____ #35____ #40____ #45____ #50____ = Subtotal<br>
+    A________
+    For items, #10, 20, 30, subtract the number that you circled from 6. For example, if you circled
+        4, your score would be 2 (6 – 4 = 2). Using your newly obtained scores, add these four items.<br>
+    6 – item 10 = _________<br>
+    6 – item 20 = _________<br>
+        6 – item 30 = _________<br>
+    Subtotal B = __________<br>
+    Subtotal A________ + Subtotal B_______ = Total Openness to Experience _________<br>
+ </p>
+
+ <h3>Interpreting the Survey:</h3>
+ <p>
+    Each factor of the Big 5 Personality (Extraversion, Agreeableness, Conscientiousness,
+    Emotional Stability, and Openness to Experience) has a range of possible scores from 5-50. The
+    higher the score, the more you perceive this characteristic as descriptive of your personality.
+ </p>
+
+</div>
+{% endblock content %}

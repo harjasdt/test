@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  body{
+    background:url('https://wallpaperaccess.com/thumb/6553651.jpg');
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .container{
+    width:50vw;
+    text-align:center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+  table{
+    margin-bottom: 20px;
+  }
+  @media only screen and (max-width: 400px){
+    .container{
+      width:auto;
+    }
+  }
+</style>
+<div class="container">
+  <p>Each factor of the Big 5 Personality has a range of possible scores from 5-50. 
+    The higher the score, the more you perceive this characteristic as descriptive of your personality.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">QUALITY</th>
+          <th scope="col">SCORE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Openness</td>
+          <td>{{ openness }}</td>
+        </tr>
+        <tr>
+          <td scope="row">Conscientiousness</td>
+          <td>{{ con }}</td>
+        </tr>
+        <tr>
+          <td scope="row">Extraversion</td>
+          <td>{{ ex }}</td>
+        </tr>
+        <tr>
+          <td scope="row">Agreeableness</td>
+          <td>{{ agree }}</td>
+        </tr>
+        <tr>
+          <td scope="row">Neuroticism</td>
+          <td>{{ neuro }}</td>
+        </tr>
+
+        
+      </tbody>
+    </table>
+
+
+<br>
+<h5> Mail me my Result</h5>
+    <form action="result" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          
+          <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="mail" required>
+        </div>
+        <button type="submit"  class="btn btn-light ">Send</button>
+    </form>
+
+</div>
+{% endblock content%}
