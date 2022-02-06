@@ -30,6 +30,7 @@ def nominate(request):
         subject = 'Nominated for Big 5 Personality Test'
         message = render_to_string(template_name='nomi_mail.html')
         send_mail(subject, message, from_email, recipient_list,html_message=html_message)
+        return render(request,'home.html')
     return render(request,'nominate.html')
 
 def logic(request):
@@ -175,4 +176,5 @@ def result(request):
         subject = 'Big 5 Personality Test Result'
         message = render_to_string(template_name='email.html')
         send_mail(subject, message, from_email, recipient_list,html_message=html_message)
+        return render(request,'home.html')
     return render(request,'result.html')
