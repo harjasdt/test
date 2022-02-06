@@ -128,7 +128,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_HOST_USER = 'firsttest73@gmail.com'
-EMAIL_HOST_PASSWORD = 'first_test123'
+EMAIL_HOST_USER = 'your-mail'
+EMAIL_HOST_PASSWORD = 'your-pssdword'
 
 
