@@ -7,5 +7,6 @@ urlpatterns = [
     path('nominate', views.nominate,name='nominate'),
     path('Q&A', views.question,name='question'),
     path('logic', views.logic,name='logic'),
-    path('result', views.result,name='result')
+    path('result', views.result,name='result'),
+    path('question', views.question,name='question')
 ]

@@ -1,17 +1,90 @@
 {% extends "base.html" %}
+{% block title %}QUESTION{% endblock title %}
 {% block nav_question %}active{% endblock nav_question %}
 {% block content %}
 <style>
     body{
-        background:url('https://maxcdn.icons8.com/app/uploads/2018/08/sunrise-photo.jpg');
+      background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoIBwgHCAoQBwcHBwoHBwcHDRAICQcKFREWFhURExMYHSggGCYlJxUTITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NFSsZFR0rLSstLSstMC0rKy0rLS0rKysrKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAb/xAAaEAEBAQEBAQEAAAAAAAAAAAAAEQESAhMD/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD2/I5b8jl3cWHI5b8jkGHI5b8jkGHI5b8jkGHI5b8jgVhyfDfhWeCjn4Ph05+Z5+aUjm+avm6c/M+CkcvzP5urgcFI5PmPm6+BwUjj38y383ZwnfzKRyb4Lh17+ad/NaRy8Fy6d8FwDn5HLfgciMORy35HIMORy35HIMORy35HIMORy35HINuBw1giNMuBw1ggMuBw1ggMuBw1ggMuFZ4a55VnlBlnhWfm1zyrMBlnhXDWCIrPkctYIDPkctIIDPkctIIDLkuGxQGPCd8OiFuA5t8J3w6t8o3ytRzb4Lh0b5TuAx4HDWCKMuBw1ggMuBw1ggMuBw1ggKgi4IgiCLggIgi4ICYeYeYrMAsxWeVZisxFLMOKggJgigCYIoAmCKAJgigCYIoAmCKAIhbjSFuAx3E7jbcTuAx3CjTcKKiIIuCAiCLggIgi4ICgqCIJCoICRFQZgpZi8wZi8wCzFQ8w4gQOCCkIcOAmHFcnyCII05HIM4I05HIMoI05LfIICoUAiioICNxO41idwRjuJ3G24jcUQFQQEhUEESFQQFQRUEFTBFQQEw8w4eYAzFZgzFZiKIFQQEnDisxBOYrMVmHATDhmCQoAkRQBMKLKAz3C3Gm4W4DMlwooktxcLcBnuJ3Gm4ncEZ7gitwRRMEVBATBFQQFQRUERUwRUEBMPMOHmAMxWYMxWYgUOHDzALMVmDMVBSCoICQqCAkKggJCoICQqCAkbioUBG4ncabidwEwoqCCM9xO403E7iiNworcEBMEVBATBFQQFQRUEQTBFQQEw4cOAMxWYWYrAEPMB4AzFDDFIGECBgCBgCBgCBgCBgE7hbi06ojcJe4QiNTuL0twEQoqCAmCKggJgioICoIuCAiCLggIhxUEAsPBDwBisB4inmCHggEDggEDggEDggEDggEDggEDggFC3FQtwEaS9TuKJSuFBEQRcEBEEXBARBFwQFQRUERUwRUEBMEVBATDhwQAeCHgGYwQADggEDggEDggEDggEDggEDggJLVECdSsoCIIqCAmCKggJgioICYIqCAX0wfTHJ2O1iOv6YPpjk7HZB1/TB9McvY7IV1fTB9McvY7IOv6YM/THJ2fZFdme8PrHJnteeyDp6wdYwz0fSDa4LjLodA1uC4y6HQNbguMuh0Daiseh0DW4OmXSd9g231hb7xhvtO+1g6O8LvHN2OyDp7wd45ux2QdPeDrHN2OyDp6wdY5ux2QdPWDrHP2OyDj7Hbn+g+jbFdHY7c/0H0SFdPY7c30HZB09jtzfQfQg6ex25uz+hFdWe1Z+jj+h5+hCu/P0Vntw5+jTP1SFdeez7cuforsi10dH05/oOyFdHRdMOx2Qb9l2w+id/QhXRv6I39HPv6I39CJXRv6J7c/0LtYV09jtzdn2Do7Hbn7HZB0djtz9jsg6Ox25+x2QdHZ9ubsdg4gA0yYAAwAAMACMAAZAF4vDCKvFYYQPDAFBAAWo0AEanQFQgAoAAAMAAAEAAAAAB//2Q==');
         width: 100%;
         height: 90vh;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
-        opacity: 2;
+      }
+      .container{
+        margin-top: 40px;
+      }
+      .main{
+        margin-top: 10px;
+      }
+      .end{
+        margin-bottom: 25px;
       }
 </style>
-WELCOME TO QUESTION PAGE
+<div class="container main"> 
+<h1>Accuracy of big 5 test</h1>
+<p>The Big Five Personality Test is by far the most scientifically validated and reliable psychological model to measure personality. This test is, together with the Jung test and the DISC assessment, one of the most well known personality tests worldwide. <br>This personality test is fast and reliable.</p>
+</div>
+<div class="container">
+  <h1>Big-5 Traits of Entrepreneurs</h1>
+  <p>
+    Entrepreneurs have very high openness. <br>
+    Openness is an interest in ideas and aesthetics. 
+    Meaning, it is the culmination of I.Q. and creativity. Intuitively, it makes sense that trailblazers are smart and creative.
+  </p>
+  <p>
+    Entrepreneurs have lower conscientiousness. <br>
+     Conscientiousness is associated with duty, precision, and responsibility. 
+    That means orderly people who like procedures and rules don’t generally start companies because it’s a creative process.
+  </p>
+  <p>
+    Entrepreneurs have lower agreeableness.<br>
+     Agreeableness is primarily about care for others.
+    The advantages of being disagreeable are being tough-minded, blunt, skeptical, competitive, willing to ask for a raise,
+     know what they want, and won’t do what they don’t want to do.
+  </p>
+  <p>
+    Entrepreneurs are highly intelligent, creative, and want to do things their way. Thus, starting their own business is ideal.
+    However, the traits of extraversion and neuroticism are not strongly correlated with entrepreneurial tendencies.
+  </p>
+</div>
+
+<div class="container">
+  <h1>The Big-5 Shows Why Their Work Preference is Unique</h1>
+  <p>
+    Entrepreneur’s work ethic is unique because they like to shake up current systems to see how they can operate better. That tendency exists due to high creativity.
+<br>
+However, this question everything and shake things up attitude is not often welcome in entry-level positions.
+<br>
+This is a problem because creative innovative people are incapable of simply not creating and shaking things up. It’s like banishing an extroverted person to a hermits life – a bit like torture.
+<br>
+This characteristic makes the creation of the high stakes of starting businesses less stressful to those with entrepreneurial traits than entry-level jobs at inefficient bureaucracies.
+<br>
+This do-or-die attitude makes their work preference unique.<br>
+  </p>
+</div>
+
+<div class="container end">
+  <h1>The Big-5 Reveals Stereotypical Weaknesses</h1>
+  <p>People who type as having entrepreneurial traits in the Big-5 have low agreeableness.
+<br>
+    The primary disadvantage of being low in agreeableness is that one does not adequately take into consideration other people’s feelings.
+    <br>
+    But, that is a reason to expand your personality, not change it. The benefits of low agreeableness are clear in the business world because that world is impersonal and difficult. But, those with entrepreneurial traits do not have to choose between being successful professionally and personally.
+    <br>
+    Once you are aware you have low agreeableness, you can expand your personality. Working on taking other people’s perspectives into consideration and working acts of kindness into your routine helps. Like once a week or day do someone a favor or give a gift.
+    <br>
+    Basically, practice being compassionate and polite, not to change your personality but to be a more complex stable person.
+    <br>
+    After all, what’s the point of shooting for the stars if you make it there alone?
+    <br>
+    This personal development work will help you be more stable because it will improve your relationships which improves mood and stability.
+    <br>
+    Additionally, the opposite is true as well. Upsetting people will cause them to upset you; it turns into a pretty vicious cycle.
+    <br>
+    It’s not bad to be disagreeable. However, it does put more social skills in your tool kit to become a more well-rounded person.
+    <br>
+    Therefore, the Big-5 identifies entrepreneurs by categorizing personality traits, shows why their work preference is unique and reveals the major stereotypical weakness in entrepreneurial types.</p>
+</div>
 {% endblock content %}
