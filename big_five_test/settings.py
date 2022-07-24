@@ -129,6 +129,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'gtest7402@gmail.com'
-EMAIL_HOST_PASSWORD = 'rangilakutta123'
+EMAIL_HOST_PASSWORD = 'atxrvgpysmiibiib'
 
 
